@@ -7,6 +7,7 @@ ruby '3.1.2'
 
 gem 'bootsnap', require: false
 gem 'cssbundling-rails'
+gem 'devise'
 gem 'jbuilder'
 gem 'jsbundling-rails'
 gem 'puma', '~> 5.0'
