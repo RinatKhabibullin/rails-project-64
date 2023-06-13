@@ -1,6 +1,11 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  devise_for :users, controllers: { sessions: 'users/sessions' }
-  root to: "home#index"
+  resources :posts
+  resources :categories
+  devise_for :users, controllers: {
+    sessions: 'users/sessions'
+  }
+
+  root to: "posts#index"
 end

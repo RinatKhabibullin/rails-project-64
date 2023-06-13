@@ -1,0 +1,6 @@
+
+= simple_form_for post do |form|
+  = form.input :title, class: 'mb-3'
+  = form.input :body, class: 'mb-3'
+  = form.association :category, collection: Category.all, label_method: :name, value_method: :id, class: 'mb-3'
+  = form.button :submit, class: 'btn-primary'

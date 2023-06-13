@@ -12,11 +12,13 @@ gem 'jbuilder'
 gem 'jsbundling-rails'
 gem 'puma', '~> 5.0'
 gem 'rails', '~> 7.0.5'
+gem 'rails-i18n'
 gem 'sentry-rails'
 gem 'sentry-ruby'
 gem 'sprockets-rails'
 gem 'stimulus-rails'
 gem 'slim'
+gem 'simple_form'
 gem 'turbo-rails'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
