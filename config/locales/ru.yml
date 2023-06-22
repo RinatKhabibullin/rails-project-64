@@ -30,7 +30,49 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 ru:
+  app_name: Коллективный блог
+  new_post: Новый пост
+  time_before: "%{time} назад"
+  sign_in: Войти
   helpers:
     submit:
       post:
-        create: "Опубликовать"
+        create: Опубликовать
+      post_comment:
+        create: Оставить комментарий
+  layouts:
+    application:
+      main_page_labe: Блог
+      sign_up: Зарегистрироваться
+      sign_out: Выйти
+  posts:
+    post:
+      likes_count: "Понравилось: %{count}"
+    show:
+      all_posts: Все посты
+      comments: Комментарии
+    form:
+      title: Заголовок
+      body: Сообщение
+      category: Категория
+  devise:
+    failure:
+      user:
+        invalid: Не верные данные
+    sessions:
+      user:
+        signed_in: Вы успешно вошли
+        signed_out: Вы успешно вышли
+      new:
+        remember_me: Запомни меня
+        password: Пароль
+    registrations:
+      user:
+        signed_up: Вы успешно зарегестрировались
+      new:
+        registration: Регистрация
+        password: Пароль
+        password_confirmation: Подтверждение пароля
+  comments:
+    child_comment_form:
+      comment: Комментировать

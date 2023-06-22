@@ -1,0 +1,14 @@
+.card.mt-2.me-2.rounded-0
+  .card-header.border-0
+    span.me-2 = comment.creator.email
+    span.fs-6.text-muted = l(comment.created_at, format: '%d %B, %H:%M')
+  .card-body.border-0
+    p.card-text = comment.content
+  .card-footer.border-0
+    a.btn.btn-primary data-bs-toggle="collapse" href="#" data-bs-target="#comment-#{comment.id}" type="button" aria-expanded="false" aria-controls="comment-#{comment.id}" 
+      = t('.comment')
+    .collapse.mt-2 id="comment-#{comment.id}"
+      = render '/comments/form', comment: new_comment, post:, parent_id: comment.id
+  .ms-4.mb-2
+    - comment.children.each do |child|
+      = render '/comments/child_comment_form', comment: child, post:, new_comment:

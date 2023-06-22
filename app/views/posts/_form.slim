@@ -1,6 +1,5 @@
-
-= simple_form_for post do |form|
-  = form.input :title, class: 'mb-3'
-  = form.input :body, class: 'mb-3'
-  = form.association :category, collection: Category.all, label_method: :name, value_method: :id, class: 'mb-3'
+= simple_form_for post, data: { turbo: false } do |form|
+  = form.input :title, class: 'mb-3', label: t('.title')
+  = form.input :body, as: :text, class: 'mb-3', label: t('.body')
+  = form.association :category, collection: Category.all, label_method: :name, value_method: :id, class: 'mb-3', label: t('.category')
   = form.button :submit, class: 'btn-primary'

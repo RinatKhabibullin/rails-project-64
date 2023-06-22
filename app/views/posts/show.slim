@@ -1,0 +1,23 @@
+ol.breadcrumb
+  li.breadcrumb-item
+    = link_to t('.all_posts'), root_path
+  li.breadcrumb-item.active
+    = @post.category.name
+
+h1.mt-5 = @post.title
+p = simple_format(@post.body)
+.d-flex.justify-content-between.mt-5
+  div
+    span.me-2
+      = @post.creator.email
+    span
+      = t('time_before', time: time_ago_in_words(@post.created_at))
+  div
+    span
+      | 0
+.lead.mt-3
+  span = t('.comments')
+  = render '/comments/form', comment: @new_comment, post: @post, parent_id: nil
+  - @root_comments.each do |comment|
+    = render 'comments/child_comment_form', comment:, post: @post, new_comment: @new_comment
+

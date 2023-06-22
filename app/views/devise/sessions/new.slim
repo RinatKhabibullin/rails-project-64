@@ -1,7 +1,7 @@
-h2.mt-5 Войти
+h2.mt-5 = t('sign_in')
 
 = simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: false }) do |f|
   = f.input :email, label: false, required: false, autofocus: true, input_html: { autocomplete: "email" }, placeholder: "E-mail"
-  = f.input :password, label: false, required: false, input_html: { autocomplete: "new-password" }, placeholder: "Password"
-  = f.input :remember_me, as: :boolean, label: "Запомни меня" if devise_mapping.rememberable?
-  = f.button :submit, "Войти", class: "btn btn-outline-primary"
+  = f.input :password, label: false, required: false, input_html: { autocomplete: "new-password" }, placeholder: t('.password')
+  = f.input :remember_me, as: :boolean, label: t('.remember_me') if devise_mapping.rememberable?
+  = f.button :submit, t('sign_in'), class: "btn btn-outline-primary"
