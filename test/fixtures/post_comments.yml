@@ -1,0 +1,6 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  content: "Роботы-помощники действительно имеют огромный потенциал, но важно помнить, что они должны служить нам, а не замещать нас на рабочих местах."
+  creator: two
+  post: one

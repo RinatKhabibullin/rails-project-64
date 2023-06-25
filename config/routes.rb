@@ -5,9 +5,9 @@ Rails.application.routes.draw do
     sessions: 'users/sessions'
   }
 
-  resources :posts, only: [:index, :create, :show, :new] do
+  resources :posts, only: %i[index create show new] do
     resources :comments, only: [:create]
   end
 
-  root to: "posts#index"
+  root to: 'posts#index'
 end

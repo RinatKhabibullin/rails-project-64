@@ -1,13 +1,7 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  body: MyString
+  title: "Роботы-помощники: улучшение качества жизни или угроза рабочим местам?"
+  body: "Роботы-помощники могут улучшить точность и эффективность работы, но возникает вопрос: заменят ли они людей на рабочих местах? Новое исследование анализирует эту проблему."
   creator: one
-  category: one
-
-two:
-  title: MyString
-  body: MyString
-  creator: two
   category: two

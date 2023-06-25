@@ -1,5 +1,7 @@
 install:
 	bundle install
+	yarn install
+	bin/rails assets:precompile || true
 test:
 	bundle exec rake test
 lint:
